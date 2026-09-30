@@ -17,8 +17,8 @@ fun DeviceScreen(viewModel: DeviceViewModel = viewModel()) {
     val uiState by viewModel.uiState.collectAsState()
 
     when (val state = uiState) {
-        is DeviceUiState.Loading -> Text(("Loading..."), modifier = Modifier.fillMaxSize().padding(64.dp))
-        is DeviceUiState.Error -> Text(("Error: ${state.message}"), modifier = Modifier.fillMaxSize().padding(64.dp))
+        is DeviceUiState.Loading -> Text(("Loading..."), modifier = Modifier.fillMaxSize().padding(48.dp))
+        is DeviceUiState.Error -> Text(("Error: ${state.message}"), modifier = Modifier.fillMaxSize().padding(48.dp))
         is DeviceUiState.Success -> {
             LazyColumn(modifier = Modifier.fillMaxSize().padding(16.dp)) {
                 items(state.devices) { device ->
