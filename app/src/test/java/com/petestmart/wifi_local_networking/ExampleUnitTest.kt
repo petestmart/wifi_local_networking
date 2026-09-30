@@ -1,4 +1,4 @@
-package com.example.wifi_local_networking
+package com.petstmart.wifi_local_networking
 
 import org.junit.Test
 
